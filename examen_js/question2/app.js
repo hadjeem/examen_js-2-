@@ -4,6 +4,7 @@ const logger = require('morgan');
 
 const usersRouter = require('./routes/users');
 const pizzaRouter = require('./routes/pizzas');
+const placeRouter = require('./routes/places');
 
 const app = express();
 
@@ -14,5 +15,6 @@ app.use(cookieParser());
 
 app.use('/users', usersRouter);
 app.use('/pizzas', pizzaRouter);
+app.use('/places', placeRouter);
 
 module.exports = app;
